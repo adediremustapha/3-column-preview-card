@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ :root{
+    --Gold-500: hsl(31, 77%, 52%);
+    --Cyan-800: hsl(184, 100%, 22%);
+    --Green-950: hsl(179, 100%, 13%);
+
+   --Transparent-White: hsla(0, 0%, 100%, 0.75);
+   --Gray-100: hsl(0, 0%, 95%);
+
+   --ff: 'Big Shoulders', cursive;
+   --ff2: 'Lexend Deca', sans-serif;
+
+ }
+
+body{
+    font-family: var(--ff2);
+    background-color: var(--Gray-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+        display: flex;
+        width: 930px;
+        justify-content: center;
+        align-items: center;
+        height: 450px;
+        /* min-height: 100vh; */
+        /* background-color: var(--Gray-100); */
+}
+.sedan-container{
+    background-color: var(--Gold-500);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px
+}
+.suv-container{
+    background-color: var(--Cyan-800);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px
+}
+.luxury-container{
+    background-color: var(--Green-950);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px
+}
+img{
+    width: 55px;
+    margin-bottom: 20px
+}
+h1{
+    font-family: var(--ff2);
+    color: var(--Transparent-White);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+p{
+    color: var(--Transparent-White);
+    font-size: 17px;
+    line-height: 1.5;
+    font-family: var(--ff);
+}
+
+button{
+    background-color: var(--Gray-100);;
+    border: 2px solid transparent;
+    width: 120px;
+    height: 40px;
+    font-family: var(--ff2);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: auto;
+    cursor: pointer;
+    border-radius: 20px
+}
+.sedan-container button{
+    color: var(--Gold-500);
+}
+.suv-container button{
+    color: var(--Cyan-800);
+}
+.luxury-container button{
+    color: var(--Green-950);
+}
+button:hover{
+    background-color: transparent;
+    border: 2px solid var(--Transparent-White);
+    color: var(--Transparent-White);
+}
+
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+        width: 70%;
+        height: auto;
+    }
+    .sedan-container, .suv-container, .luxury-container{
+        width: 100%;
+        height: auto;
+    }
+}
